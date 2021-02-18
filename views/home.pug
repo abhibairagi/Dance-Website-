@@ -1,0 +1,61 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style 
+  style
+    include ../static/style.css
+    //- include ../static/phone.css
+
+block content
+   nav#navbar
+        ul 
+            div#logo
+              img(src="/static/img/img3.jpg", alt="")
+              | ADA
+            li #[a(href="/") Home]
+            li #[a(href="/") About] 
+            li #[a(href="/") Class Info]
+            li #[a(href="/") Services]
+            li #[a(href="/contact" target="blank") Contact us] 
+
+        Section#Intro-section
+          div Welcome to Abhishek's Dance Academy   
+          div.small Eat Sleep Dance Repeat
+
+          //- Mission Section 
+        Section#Intro-mission
+          h3  Our Missions
+          div.card 
+            h4 Dance Perfection
+            div.card-box
+              div.card-img
+                img(src="/static/img/img1.jpg", alt="")
+              div.card-content  
+                p This is the best Dance Academy of the universe.
+          div.card 
+            h4 Dance the way you Like
+            div.card-box
+              div.card-img
+                img(src="/static/img/img2.jpg", alt="")
+              div.card-content  
+                p This is the best Dance Academy of the universe.
+          div.card 
+            h4 Expert Teaching
+            div.card-box
+              div.card-img
+                img(src="/static/img/img3.jpg", alt="")
+              div.card-content  
+                p This is the best Dance Academy of the universe.
+
+            //- Intro Sponser 
+        Section#Intro-Sponser
+          h3 Our Sponsors
+            div#sponser
+              img(src="/static/img/apple.png", alt=""  Class="spimage")
+              img(src="/static/img/google.jpg", alt="" Class="spimage")
+              img(src="/static/img/dance.png", alt="" Class="spimage")
+              img(src="/static/img/steezy.png", alt="" Class="spimage")
+        
+        

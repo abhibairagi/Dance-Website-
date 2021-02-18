@@ -1,0 +1,30 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style 
+  style
+    include ../static/style.css
+
+
+block content
+  nav#navbar
+        ul 
+            div#logo
+              img(src="/static/img/img3.jpg", alt="")
+              | ADA
+            li #[a(href="/") Home]
+            li #[a(href="/") About] 
+            li #[a(href="/") Class Info]
+            li #[a(href="/") Services]
+            li #[a(href="/") Contact us] 
+  Section#Contacts
+        div.connect 
+          h1 Contact us
+          form(action="/contact", method="post" )
+              input(type="text" name="name" placeholder="Enter your name")
+              input(type="phone" name="phone" placeholder="Enter your Phone number")
+              input(type="email" name="email" placeholder="Enter your Email ID")
+              textarea(name="message" placeholder="Message us", cols="20", rows="2")
+              button Submit
